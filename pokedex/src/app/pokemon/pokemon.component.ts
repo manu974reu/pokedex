@@ -8,8 +8,8 @@ import { POKEMONS } from './mock-pokemons';
   styleUrls: ['./pokemon.component.css']
 })
 export class PokemonComponent implements OnInit {
-  pokemons: Pokemon[] = null;
-
+  private pokemons: Pokemon[];
+  private title: string = 'Pokémons';
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +17,9 @@ export class PokemonComponent implements OnInit {
   }
   selectPokemon(pokemon: Pokemon) {
     alert('Vous avez cliqué sur' + pokemon.name);
+  }
+  onClick() {
+    console.log('click!');
   }
 
 }
